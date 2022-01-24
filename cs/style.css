@@ -89,16 +89,16 @@ button {
 }
 .disc-item {
   height: 3rem;
+  border-radius: 5rem;
 }
-/* .disc-item1 {
-  background-color: blueviolet;
-  width: 10rem;
+.disc-container2 {
+  left: 26rem;
 }
-.disc-item2 {
-  background-color: blue;
-  width: 15rem;
+.disc-container3 {
+  left: 49.5rem;
 }
-.disc-item3 {
-  background-color: royalblue;
+/* .disc-container2 .disc-item,
+.disc-container3 .disc-item {
+  background-color: black;
   width: 20rem;
 } */
