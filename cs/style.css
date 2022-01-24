@@ -1,0 +1,30 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+h1 {
+    font-size: 3rem;
+}
+p {
+    font-size: 1.6rem;
+}
+button {
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+.container {
+    width: 110rem;
+    max-width: 90%;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    min-height: calc(100vh - 8rem);
+}
+/*            End of commons                 */

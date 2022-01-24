@@ -1,0 +1,1 @@
+document.getElementById('tohBtn').addEventListener('click', () => window.location.pathname = '/toh.html')
