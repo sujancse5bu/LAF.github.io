@@ -1,36 +1,67 @@
 html {
-    font-family: 'Roboto', sans-serif;
-    font-size: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px;
 }
+
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.3);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.3);
 }
+
 h1 {
-    font-size: 3rem;
+  font-size: 3rem;
 }
-p {
-    font-size: 1.6rem;
+
+p,
+label,
+input {
+  font-size: 1.6rem;
 }
+
 button {
-    cursor: pointer;
-    font-size: 1.6rem;
+  cursor: pointer;
+  font-size: 1.6rem;
 }
+
 .container {
-    width: 110rem;
-    max-width: 90%;
-    margin: 2rem auto;
-    padding: 2rem;
-    border-radius: 1rem;
-    background-color: #fff;
-    min-height: calc(100vh - 8rem);
+  width: 110rem;
+  max-width: 90%;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  min-height: calc(100vh - 8rem);
 }
+
 .content {
-    display: none;
+  display: none;
 }
-.content.home {
-    display: initial;
+
+.content.toh {
+  display: initial;
 }
-/*            End of commons                 */
+
+/******* TOH ********/
+.image-container {
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: blanchedalmond;
+  height: 40rem;
+  width: 70rem;
+  border-radius: 1rem;
+  padding-bottom: 3rem;
+}
+
+.image-container .dividers {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+.image-container .dividers .divider {
+  width: 1rem;
+  background-color: rgb(127, 127, 255);
+  border-radius: 1rem 1rem 0 0;
+}

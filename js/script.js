@@ -1,4 +1,10 @@
 document.getElementById('tohBtn').addEventListener('click', () => showSection('toh'))
+
+
+
+
+
+
 const showSection = (targetClass) => {
   const sections = document.getElementsByClassName('content')
   Array.from(sections, (element, index) => {
