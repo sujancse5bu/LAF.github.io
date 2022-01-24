@@ -128,7 +128,7 @@ const updateTOH_UI = () => {
 
     // clearInterval(uiInterval)
     // return
-  }, 2000)
+  }, 1000)
   
   console.log(discContainer1)
 }
