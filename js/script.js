@@ -9,6 +9,7 @@ window.onload = () => {
   generateDiscs1(Array.from({ length: 3 }).map((item, index) => index + 1))
   document.getElementById('tohInput').addEventListener('change', (e) => {
     totalDiscLength = parseInt(e.target.value)
+    discInfos = []
     generateDiscs1(Array.from({length: parseInt(e.target.value)}).map((item, index) => index + 1))
   })
   document.getElementById('startBtn').addEventListener('click', () => {
@@ -26,13 +27,14 @@ const Hanoi = (n, from, to, via) => {
   Hanoi(n-1, via, to , from)
 }
 const moveDisk = (from, to, via) => {
-  // console.log('discInfos: ', discInfos)
+  console.log('info: ', from, via, to)
   let lastIndex = discInfos.length - 1
   let lastItem = discInfos[lastIndex]
   let lastItemFrom = discInfos[lastIndex][`d${from}`]
   let lastItemFromFirst = discInfos[lastIndex][`d${from}`][0]
   let lastItemVia = discInfos[lastIndex][`d${via}`]
   let lastItemFViaFirst = discInfos[lastIndex][`d${via}`][0]
+  let lastItemTo = discInfos[lastIndex][`d${to}`]
   // console.log('lastItemFrom: ', from, lastItemFrom)
   
   // console.log('discInfos b:', discInfos)
@@ -41,26 +43,27 @@ const moveDisk = (from, to, via) => {
     {
       ...lastItem, 
       [`d${from}`]: lastItemFrom.filter((item, index) => index !== 0),
-      [`d${via}`]: [lastItemFromFirst, ...lastItemVia]
+      // [`d${via}`]: [lastItemFromFirst, ...lastItemVia]
+      [`d${to}`]: [lastItemFromFirst, ...lastItemTo]
     }
   ]
-  lastIndex = discInfos.length - 1
-  lastItem = discInfos[lastIndex]
-  lastItemFrom = discInfos[lastIndex][`d${from}`]
-  lastItemVia = discInfos[lastIndex][`d${via}`]
-  let lastItemTo = discInfos[lastIndex][`d${to}`]
-  lastItemFromFirst = discInfos[lastIndex][`d${from}`][0]
-  lastItemFViaFirst = discInfos[lastIndex][`d${via}`][0]
-  let lastItemFToFirst = discInfos[lastIndex][`d${to}`][0]
+  // lastIndex = discInfos.length - 1
+  // lastItem = discInfos[lastIndex]
+  // lastItemFrom = discInfos[lastIndex][`d${from}`]
+  // lastItemVia = discInfos[lastIndex][`d${via}`]
+  // let lastItemTo = discInfos[lastIndex][`d${to}`]
+  // lastItemFromFirst = discInfos[lastIndex][`d${from}`][0]
+  // lastItemFViaFirst = discInfos[lastIndex][`d${via}`][0]
+  // let lastItemFToFirst = discInfos[lastIndex][`d${to}`][0]
 
-  discInfos = [ /// removed disc via + add disc to
-    ...discInfos,
-    {
-      ...lastItem, 
-      [`d${via}`]: lastItemVia.filter((item, index) => index !== 0),
-      [`d${to}`]: [lastItemFViaFirst, ...lastItemTo]
-    }
-  ]
+  // discInfos = [ /// removed disc via + add disc to
+  //   ...discInfos,
+  //   {
+  //     ...lastItem, 
+  //     [`d${via}`]: lastItemVia.filter((item, index) => index !== 0),
+  //     [`d${to}`]: [lastItemFViaFirst, ...lastItemTo]
+  //   }
+  // ]
   
   
 
