@@ -23,18 +23,39 @@
       <button id="tohBtn">Tower of Hanoi</button>
     </div>
     <div id="tohSection" class="content toh">
-      <button id="backBtn">Back</button>
+      <!-- added a back to home link to btn -->
+      <a href="../index.html"><button id="backBtn">Back</button></a>
       <h1>Tower of Hanoi</h1>
       <div id="tohInputContainer">
-        <label for="tohInput">Select number of disc</label>
-        <select type="number" id="tohInput">
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-        </select>
-        <button id="startBtn">Start</button>
+        <div class="disc-select">
+          <label for="tohInput">Select number of disc</label>
+          <select type="number" id="tohInput">
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+        <div id="speedContainer">
+          <div class="speed-heading">
+            <h4>Speed</h4>
+          </div>
+          <div class="speed-controls">
+            <button id="speedDownBtn">-</button>
+            <span id="speedSpan">1 disc(s)/second</span>
+            <button id="speedUpBtn">+</button>
+          </div>
+        </div>
+        <div class="control-container">
+          <button id="playBtn">Play</button>
+          <button id="stopBtn">Stop</button>
+        </div>
       </div>
+      
       <div class="image-container">
         <div class="dividers">
           <div class="divider divider1"></div>
@@ -43,19 +64,10 @@
         </div>
         <div class="horizontal-line"></div>
         <div class="disc-container disc-container1">
-          <!-- <div class="disc-item disc-item1" data-id="1"></div>
-          <div class="disc-item disc-item2" data-id="2"></div>
-          <div class="disc-item disc-item3" data-id="3"></div> -->
         </div>
         <div class="disc-container disc-container2">
-          <!-- <div class="disc-item disc-item1" data-id="1"></div>
-          <div class="disc-item disc-item2" data-id="2"></div>
-          <div class="disc-item disc-item3" data-id="3"></div> -->
         </div>
         <div class="disc-container disc-container3">
-          <!-- <div class="disc-item disc-item1" data-id="1"></div>
-          <div class="disc-item disc-item2" data-id="2"></div>
-          <div class="disc-item disc-item3" data-id="3"></div> -->
         </div>
       </div>
     </div>

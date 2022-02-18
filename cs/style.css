@@ -13,7 +13,9 @@ body {
 h1 {
   font-size: 3rem;
 }
-
+h4 {
+  margin: 0;
+}
 p,
 label,
 input, select, option {
@@ -44,9 +46,50 @@ button {
 }
 
 /******* TOH ********/
+.toh #tohInputContainer {
+  margin-bottom: 35px;
+  display: grid;
+  grid-template-columns: 3fr 2fr 3fr;
+  gap: 30px;
+  justify-items: center;
+  align-items: center;
+  user-select: none;
+}
 .toh #tohInputContainer select {
-  min-width: 20rem;
-  margin-left: 2rem;
+  min-width: 100%;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 10px;
+}
+.toh #tohInputContainer #speedContainer {
+  text-align: center;
+}
+.toh #tohInputContainer #speedContainer h4{
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.toh #tohInputContainer #speedContainer .speed-controls button,
+.toh #tohInputContainer .control-container button {
+  font-size: 18px;
+  font-weight: bolder;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: blueviolet;
+  color: #fff;
+}
+.toh #tohInputContainer #speedContainer .speed-controls span {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 10px;
+}
+.toh #tohInputContainer .control-container button {
+  background-color: darkblue;
+  padding: 5px 15px;
+}
+.toh #tohInputContainer .control-container button#stopBtn {
+  background-color: crimson;
+  margin-left: 10px;
 }
 .image-container {
   margin: 2rem auto;
